@@ -1,13 +1,15 @@
-var itself = document.getElementById("quiz");
-console.log("quiz");
+var quiz = document.getElementById('#quiz');
+question = document.getElementById('.question');
 
+// quiz.innerText = "NEW Words!";
 
-
-itself.innerHTML = "<button> Start Quiz </button>";
-itself.addEventListener("Click", quiz);
-
-var quiz() {
-    itself.innerText = "New Words";
-    
-    // itself.innerHTML = "<label>Question</label> <field>Answer\</field>";
+runQuiz() {
+    quiz.innerText = "JavaScript Quiz";
+    question.appendChild.innerHTML = "What is the letter?";
+    // answer.array.forEach(li => {
+    //     Math.floor(Math.random * 4) 
+    // });
 }
+
+runQuiz()
+// var answer = ['1','2','3','4']
