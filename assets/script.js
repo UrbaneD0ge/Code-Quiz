@@ -12,34 +12,33 @@ var lose = false;
 
 button.addEventListener('click',startQuiz);
 
-const qBank = {Q1:"What is the letter?",A1a:"A",A1b:"B",A1c:"C",A1d:"D",Q2:"What is the color?",A2a:"red",A2b:"orange",A2c:"yellow",A2d:"blue",Q3:"What is the fruit?",A3a:"Pineapple",A3b:"Mango",A3c:"Banana",A3d:"Raspberry"};
-
+const qBank = {Q1:"What is the letter?",A1:["A","B","C","D"],Q2:"What is the color?",A2:["red","orange","yellow","blue"],Q3:"What is the fruit?",A3a:["Pineapple","Mango","Banana","Raspberry"]}
 const aBank = ["A1c", "A2d", "A3a"];
 
 function startQuiz() {
     button.style.display = 'none';
     // timer.style.display = 'none';
-    quiz.textContent = qBank.Q1
-
-    // answer.innerHTML.append('<li>' + 'Answer' )
-    clock()
+    quiz.textContent = qBank.Q1;
+    for (i=0; i>1;i++) {
+        answer.innerHTML.concat('<li>' + answer + '</li>')}
+    clock();
 }
 
 // Countdown Timer
-var timeRemaining = 60;
+var timeRemaining = 5;
 console.log(timer)
 function clock() {
     var timeInterval = setInterval(function() {
         timer.textContent = timeRemaining;
         if (timeRemaining > 1) {
-            // timer.textContent = timeRemaining;
+            timer.textContent = timeRemaining;
             timeRemaining--;
         } else if (timeRemaining == 1) {
             timeRemaining--;
             } else {
                 timeRemaining.textContent = '';
                 clearInterval(timeInterval);
-                // lose();
+                lose();
             }
         if (win == true) {
             clearInterval(timeInterval);
@@ -47,4 +46,8 @@ function clock() {
             // finalScoreFunction
         }
     }, 1000);
+}
+
+function lose() {
+    button.style.display = 'show';
 }
