@@ -9,6 +9,7 @@ var score = '';
 // var timeRemaining = 0;
 var win = false;
 var lose = false;
+var response;
 
 button.addEventListener('click',startQuiz);
 
@@ -19,8 +20,11 @@ function startQuiz() {
     button.style.display = 'none';
     // timer.style.display = 'none';
     quiz.textContent = qBank.Q1;
-    for (i=0; i>1;i++) {
-        answer.innerHTML.concat('<li>' + answer + '</li>')}
+    for (response of qBank.A1) {
+        var newLi = document.createElement('button');
+        newLi.innerHTML = response;
+        answer.appendChild(newLi);
+    }
     clock();
 }
 
@@ -38,7 +42,7 @@ function clock() {
             } else {
                 timeRemaining.textContent = '';
                 clearInterval(timeInterval);
-                lose();
+                // lose();
             }
         if (win == true) {
             clearInterval(timeInterval);
