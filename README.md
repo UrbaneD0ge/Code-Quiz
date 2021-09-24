@@ -2,8 +2,8 @@
 
 Homework #4
 
-<!-- Github Pages URL -->
+https://urbaned0ge.github.io/Code-Quiz/
 
-<!-- Screenshot -->
+![127 0 0 1_5500_index html](https://user-images.githubusercontent.com/88916382/134451398-43758094-2107-4487-a6fc-48cde4f752a8.png)
 
-<!-- Descriptive texties here -->
+# Work In Progress
