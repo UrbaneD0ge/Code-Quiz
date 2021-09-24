@@ -55,3 +55,19 @@ function clock() {
 function lose() {
     button.style.display = 'show';
 }
+
+
+// scoreboard demo functionality (Jung)
+var game = 5;
+var nextGame = 10;
+
+function something() {
+    var someArray = JSON.parse(localStorage.getitem('score'));
+    someArray.push(value);
+    localStorage.setItem('score',JSON.stringify(someArray));
+};
+
+function arrangeScore() {
+    var someArray = json.parse(localStorage.getitem('score'));
+}
+// .sort
